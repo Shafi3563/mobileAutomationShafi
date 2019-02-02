@@ -145,9 +145,6 @@ public class Base {
 
         }
 
-
-
-
     }
 
     @AfterMethod

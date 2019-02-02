@@ -10,7 +10,15 @@
 
     <test name="Go to Home page" preserve-order="true">
         <classes>
-
+            <class name="testHome.HomePageTest"/>
+            <class name="testHome.BreakingNewsTest"/>
+            <class name="testHome.BusinessTest"/>
+            <class name="testHome.EntertainmentPageTest"/>
+            <class name="testHome.FashionTest"/>
+            <class name="testHome.MediaTest"/>
+            <class name="testHome.MenuTest"/>
+            <class name="testHome.OpinionTest"/>
+            <class name="testHome.SportsEventTest"/>
         </classes>
     </test>
 </suite>

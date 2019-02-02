@@ -1,7 +1,7 @@
 package iPhone;
 
-import PickersPage.Picker;
-import UiCatalogPage.UiCatalog;
+import iPhone7.Picker;
+import iPhone7.UiCatalog;
 import common.Base;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -25,7 +25,7 @@ public class PickerTest extends Base {
         picker().getUIPicker();//.selectPickerTwoWheels("Chris Armstrong","3");
         scrollKeys(ad, pickerName,"//UIAPicker[1]");
     }
-    //@Test
+    @Test
     public void testDatePicker(){
         UiCatalog uiCatalog = PageFactory.initElements(ad, UiCatalog.class);
         uiCatalog.getPickers();

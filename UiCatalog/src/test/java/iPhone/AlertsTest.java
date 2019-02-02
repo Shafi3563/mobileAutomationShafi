@@ -1,15 +1,11 @@
 package iPhone;
 
-import AlertsPage.Alerts;
-import UiCatalogPage.UiCatalog;
-import common.Base;
+import iPhone7.Alerts;
+import iPhone7.UiCatalog;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-/**
- * Created by Bilal on 25-01-2017.
- */
-public class AlertsTest extends Base {
+public class AlertsTest extends Alerts {
 
     public Alerts alerts(){
         UiCatalog uiCatalog = PageFactory.initElements(ad, UiCatalog.class);
@@ -17,39 +13,58 @@ public class AlertsTest extends Base {
         return PageFactory.initElements(ad, Alerts.class);
     }
     @Test
-    public void testActionSheetSimple() throws InterruptedException {
-        alerts().showActionSheetSimple();
+    public void testAlertPageWhole() throws InterruptedException {
+        alerts().checkAlertPageWhole();
         sleep(2);
     }
     @Test
-    public void testActionSheetOkCancel() throws InterruptedException {
-        alerts().showActionSheetOkCancel();
+    public void testAlertPageUIActionSheet() throws InterruptedException {
+        alerts().checkAlertPageUIActionSheet();
         sleep(2);
     }
     @Test
-    public void testActionSheetCustom() throws InterruptedException {
-        alerts().showActionSheetCustom();
+    public void testAlertPageShowSimple() throws InterruptedException {
+        alerts().checkAlertPageShowSimple();
         sleep(2);
     }
     @Test
-    public void testAlertSimple() throws InterruptedException {
-        alerts().showAlertSimple();
+    public void testAlertPageDialogSimpleAction() throws InterruptedException {
+        alerts().checkAlertPageDialogSimpleAction();
         sleep(2);
     }
     @Test
-    public void testAlertOkCancel() throws InterruptedException {
-        alerts().showAlertOkCancel();
+    public void testAlertPageShowOkCancel() throws InterruptedException {
+        alerts().checkAlertPageShowOkCancel();
         sleep(2);
     }
     @Test
-    public void testAlertCustom() throws InterruptedException {
-        alerts().showAlertCustom();
+    public void testAlertPageDialogOkCancelAction() throws InterruptedException {
+        alerts().checkAlertPageDialogOkCancelAction();
         sleep(2);
     }
     @Test
-    public void testSecureInput() throws InterruptedException {
-        alerts().showSecureTextInput();
+    public void testAlertPageShowCustomized() throws InterruptedException {
+        alerts().checkAlertPageShowCustomized();
         sleep(2);
     }
-
+    @Test
+    public void testAlertPageDialogOtherAction() throws InterruptedException {
+        alerts().checkAlertPageDialogOtherAction();
+        sleep(2);
+    }
+    @Test
+    public void testAlertPageUIAlertView() throws InterruptedException {
+        alerts().checkAlertPageUIAlertView();
+        sleep(2);
+    }
+    @Test
+    public void testAlertPageUIAlertViewShowSimple() throws InterruptedException {
+        alerts().checkAlertPageUIAlertViewShowSimple();
+        sleep(2);
+    }
+    @Test
+    public void testAlertPageUIAlertViewSimpleAction() throws InterruptedException {
+        alerts().checkAlertPageUIAlertViewSimpleAction();
+        sleep(2);
+    }
 }
